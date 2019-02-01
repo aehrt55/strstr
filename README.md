@@ -5,11 +5,11 @@
 ## Usage
 
 ```bash
-yarn add @aehrt55/strstr
+yarn add @xin55/strstr
 ```
 
 ```javascript
-import strstr from '@aehrt55/strstr'
+import strstr from '@xin55/strstr'
 
 expect(strstr('Function name is strstr', 'name')).toBe(9)
 expect(strstr('Function name is strstr', 'Name')).toBe(-1)
