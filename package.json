@@ -1,0 +1,53 @@
+{
+  "name": "@aehrt55/strstr",
+  "version": "1.0.0",
+  "description": "strstr practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "flow && lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/aehrt55/strstr.git"
+  },
+  "keywords": [
+    "strstr"
+  ],
+  "author": "aehrt55",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aehrt55/strstr/issues"
+  },
+  "homepage": "https://github.com/aehrt55/strstr#readme",
+  "devDependencies": {
+    "jest": "^24.0.0",
+    "lint-staged": "^8.1.1"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.0.0",
+    "eslint": "^5.12.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-flowtype": "^3.2.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "flow-bin": "^0.92.0",
+    "husky": "^1.3.1",
+    "prettier": "^1.16.3"
+  }
+}
