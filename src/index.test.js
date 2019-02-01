@@ -3,6 +3,7 @@ import strstr from './index'
 describe('strstr', () => {
   it('should find `name` in `Function name is strstr` and return the position', () => {
     expect(strstr('Function name is strstr', 'name')).toBe(9)
+    expect(strstr('aaabc', 'aabc')).toBe(1)
   })
   it('should NOT find `Name` in `Function name is strstr` and return -1', () => {
     expect(strstr('Function name is strstr', 'Name')).toBe(-1)

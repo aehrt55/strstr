@@ -11,18 +11,17 @@ export default function strstr(str: string, subStr: string): number {
   if (str.length < subStr.length) {
     return found
   }
-  let pointer: number = 0
   for (let index: number = 0; index < str.length; index++) {
+    for (let pointer: number = 0; pointer < subStr.length; pointer++) {
+      if (str[index + pointer] !== subStr[pointer]) {
+        break
+      }
+      if (pointer + 1 === subStr.length) {
+        found = index
+      }
+    }
     if (~found) {
-      continue
-    }
-    if (str[index] !== subStr[pointer]) {
-      pointer = 0
-      continue
-    }
-    pointer++
-    if (pointer === subStr.length) {
-      found = index - pointer + 1
+      break
     }
   }
   return found
